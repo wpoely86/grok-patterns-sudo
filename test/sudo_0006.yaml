@@ -1,0 +1,9 @@
+pattern: ^%{SUDO}$
+data: "foo : user NOT in sudoers ; TTY=pts/4 ; PWD=/home/foo ; USER=root ; COMMAND=/usr/bin/ls"
+results:
+  sudo_user: foo
+  sudo_tty: pts/4
+  sudo_pwd: /home/foo
+  sudo_runas: root
+  sudo_command: /usr/bin/ls
+  sudo_message: user NOT in sudoers
